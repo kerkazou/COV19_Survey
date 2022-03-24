@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+
+}
+
+body header{
+    margin-top: -30px;
+}
+
+
+body #quiz{
+    width: 70%;
+    left: 15%;
+    top: 50px;
+}
+
+body #question{
+    color: #787878;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+    /* line-height: 35px; */
+    /* font-size: 13px;     */
+}
+
+body #progress_bar{
+    position: relative;
+    height: 10px;
+    background-color: #E6F1F7;
+    border-radius: 5px;
+}body #progress_bar_etat{
+    position: absolute;
+    width: 0.22%;
+    height: 10px;
+    background-color: #1078AD;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+body .button{
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+    min-height: 80px;
+    border-radius: 5px;
+    border: 3px solid #1078AD;
+    color: #1078AD;
+    transition: .5s;
+    line-height: 0px;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.btncolor{
+    background-color: #1078AD;
+    color: #F4CF1B !important;
+}
+
+body .suivant{
+    border: 2px solid #1078AD;
+    background-color: rgba(16, 121, 173, 0.2);
+    color: #1078AD;
+    transition: .2s;
+    float: right;
+    margin-right: 4%;
+    margin-bottom: 30px;
+}
+.suivant:hover{
+    background-color: #1078AD;
+    color: white;
+    transition: .2s;
+}
+
+body .precedent{
+    border: 2px solid #1078AD;
+    background-color: rgba(16, 121, 173, 0.2);
+    color: #1078AD;
+    transition: .2s;
+    float: left;
+    margin-left: 4%;
+    margin-bottom: 30px;
+}
+
+.precedent_hover{
+    background-color: #1078AD;
+    color: white;
+    transition: .2s;
+}
+
+#terminer_test{
+    border: 2px solid #1078AD;
+    background-color: rgba(16, 121, 173, 0.2);
+    color: #1078AD;
+    transition: .2s;
+    float: right;
+    margin-right: 4%;
+    margin-bottom: 30px;
+}
+
+.btn_chois{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.input_num{
+    border: 0.5px solid #1078AD;
+    border-radius: 0;
+}
