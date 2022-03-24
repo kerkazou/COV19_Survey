@@ -1,0 +1,42 @@
+
+#button_s:hover{
+    background-color: #1078AD;
+    color: white !important;
+}
+ul li{
+    color: white;
+    list-style: none;
+    font-weight: 500;
+}
+#appelez{
+    font-family: 'Cairo', sans-serif !important;
+    font-weight: 900;
+    font-size: 20px;
+    color: #F4CF1B;
+    margin-left: 120px;
+    padding-top: 40px;
+    font-family: 'Cairo', sans-serif !important;
+}
+@media screen and (max-width: 900px) {
+    #sante{
+        width: 50px;
+        margin-top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #col {
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text{
+        width: 100%;
+    }
+    #card{
+        flex-direction: column;
+        text-align: center;
+    }
+    #text-recommandation{
+        
+    }
+}

@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- Zaiad -->
+    <div class="container-fluid w-100 " style=" background-image: url(./Assets/SVG/Merged\ bar-61.svg);">
+        <div class="container-fluid mx-auto" style="width: 95%; display: flex; text-align:center;">
+            <img id="sante" src="./Assets/SVG/logo__sante.svg" alt="img" style="width: 50px; margin-top:4px;">
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color:#F4CF1B;">
+        <h5 class="text-primary text-center pt-3">LA DERNIÈRE INFO MÉDICALE</h5>
+        <p class="text-dark fs-6 text-center mx-auto pb-4" style="width: 85%;">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.</p> 
+    </div>
+    <div id="col" class="d-flex">
+        <div>
+            <img src="./Assets/SVG/Group_80.png" alt="img" style="width: 100%;">
+        </div>
+        <div class=" justify-content-start" style=" align-items: center;">
+            <h3 id="text" class="text-center fs-3 mx-auto pt-3 w-100" style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?</h3>
+            <img class="d-block mx-auto my-auto mt-4" src="assets/SVG\élément-1.svg" alt="emoji" id="emoji">
+            <p id="dd" style="width: 100%; font-size: 15px; font-weight: 750; text-align: center; color: #7F7F7F; line-height: 35px;">
+                Je reste vigilant ? <br>
+                Je programme une téléconsultation ? <br>
+                J'appelle le 141 ? <br>
+                Faites le test pour répondre en citoyen éclairé selon vos symptômes.
+            </p>
+            <button class="w-75 border-3 d-block mx-auto" id="button_s" style="background-image: url(./Assets/SVG/Merged\ bar-61.svg); margin: 20px 0; padding: 7px; font-size: 20px; font-weight: 700; color: #1078AD; border: 1px solid #1078AD; border-radius: 10px; background-size: cover;">Démarrer le test</button>
+        </div>
+    </div>
+    <div >
+        <h3 id="text" class="text-center fs-3 mx-auto pt-3 w-100" style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Quels sont les symptômes à surveiller ?</h3>
+        <div id="card" class="d-flex" style="justify-content:space-evenly">
+            <div>
+                <img class="d-block mx-auto" src="./Assets/SVG/ico7.svg" alt="img" style="width: 50px; margin-top:30px;">
+                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Fièver</h3>
+            </div>
+            <div>
+                <img class="d-block mx-auto" src="./Assets/SVG/Calque -8.svg" alt="img" style="width: 100px; margin-top:50px;">
+                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Nausées et vomissements</h3>
+            </div>
+        </div>
+        <div id="card" class="d-flex" style="justify-content:space-evenly">
+            <div>
+                <img class="d-block mx-auto" src="./Assets/SVG/Calque -2.svg" alt="img" style="width: 220px; margin-top:30px;">
+                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Gêne respiratoire</h3>
+            </div>
+            <div>
+                <img class="d-block mx-auto" src="./Assets/SVG/Calque -1.svg" alt="img" style="width: 215px; margin-top:35px;">
+                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Toux et maux de gorge</h3>
+            </div>
+        </div>
+    </div>
+    <div id="recommandation" style="background-color: #1078AD; margin-top: 70px;">
+        <h3 id="text-recommandation" class="text-center fs-3 mx-auto w-100" style="color: white; font-size: 50px !important; font-family: 'Cairo', sans-serif !important; padding-top: 40px;">Recommandations officielles</h3>
+        <div id="blue" class="d-flex">
+            <div>
+                <h3 class=" mx-auto w-100 col-6" style="color: white; font-size: 20px !important; font-family: 'Cairo', sans-serif !important; padding-top: 40px;">Si vous pensez être malade, nous vous conseillons :</h3>
+                <ul>
+                    <li> Evitez les endroits publics.</li>
+                    <li> Ne rendez pas visite aux personnes fragiles.</li>
+                    <li> Restez chez vous.</li>
+                    <li> Respectez les mesures barrière (lavage de main, masque).</li>
+                    <li> Surveillez vos symptômes, l’évolution de votre température corporelle et recherchez un avis médical.</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <p id="appelez" class="mx-auto"><span>appelez</span></p>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 </html>
