@@ -189,7 +189,6 @@ function generate_choix() {
 }
 
 
-
 function question_suivant() {
     document.getElementById('precedent').style.display = "block";
     numbre_question++;
@@ -228,10 +227,12 @@ function terminer_test() {
 
 
 
+
+
 // const message = document.querySelector('#message');
 // const result = document.querySelector('#result');
 // message.addEventListener('input', function () {
-//     if(this.value<5){
+//     if(this.value=10){
 //         result.textContent = this.value;
 //         message.style.color = "red";
 //     }else{
