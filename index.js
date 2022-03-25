@@ -163,14 +163,14 @@ var btn = document.querySelector(".btn");
 var button = document.querySelector(".button");
 var suivant = document.getElementsByClassName("suivant");
 var cont = document.getElementById("cont");
-// document.getElementById('suivant').disabled = true;
+document.getElementById('suivant').disabled = true;
 
 
 var numbre_question = 0;
 document.getElementById('precedent').style.display = "none";
 document.getElementById('terminer_test').style.display = "none";
-document.getElementById('question').innerHTML = quizDataFr[numbre_question].question;
 document.getElementById('progress_bar_etat').style.width = "4.545%";
+document.getElementById('question').innerHTML = quizDataFr[numbre_question].question;
 document.getElementById('choix').innerHTML = generate_choix();
 
 
@@ -178,11 +178,9 @@ function generate_choix() {
     var content = "";
     if(quizDataFr[numbre_question].type== "radio"){
         for(var i = 0  ; i <= quizDataFr[numbre_question].choix.length-1 ; i++ ){
-            content += '<button value="'+ quizDataFr[numbre_question].choix[i] +'" class="btn btn-group btn_chois button" id="btn_'+i+'"><span style="font-size: 20px; margin-bottom: 8px;">'+quizDataFr[numbre_question].icons[i]+'</span><span style="font-size: 20px;">'+quizDataFr[numbre_question].choix[i]+'</span></button>';
-            // 
+            content += `<button id="${i}" type="button" onclick="chokinBtn(${i})" value="${quizDataFr[numbre_question].choix[i]}" class="btn btn-group btn_chois button" id="btn_${i}"><span style="font-size: 20px; margin-bottom: 8px;">${quizDataFr[numbre_question].icons[i]}</span><span style="font-size: 20px;">${quizDataFr[numbre_question].choix[i]}</span></button>`;
         }
-    }
-    if(quizDataFr[numbre_question].type== "number"){
+    } else if(quizDataFr[numbre_question].type== "number"){
         content += '<div class="input-group btn_chois" style="width: 60%;"><input type="number" class="form-control input_num" max="'+quizDataFr[numbre_question].choix[1]+'" min="'+ quizDataFr[numbre_question].choix[0]+'"  placeholder="'+quizDataFr[numbre_question].choix[0] +"-"+ quizDataFr[numbre_question].choix[1] +'" > <span class="input-group-text input_num" style="background-color: rgba(77, 163, 206, 0.1);">'+ quizDataFr[numbre_question].unite +'</span></div>'
     }
     return content;
@@ -190,6 +188,7 @@ function generate_choix() {
 
 
 function question_suivant() {
+    document.getElementById('suivant').disabled = true;
     document.getElementById('precedent').style.display = "block";
     numbre_question++;
     test_fin_quiz();
@@ -197,6 +196,7 @@ function question_suivant() {
     document.getElementById('progress_bar_etat').style.width = (numbre_question + 1)* 4.545 + "%";
     document.getElementById('question').innerHTML = quizDataFr[numbre_question].question;
     document.getElementById('choix').innerHTML = generate_choix();
+    console.log(quizDataFr[numbre_question-1].response)
 }
 
 function test_fin_quiz() {
@@ -210,6 +210,7 @@ function test_fin_quiz() {
 }
 
 function question_precedent() {
+    document.getElementById('suivant').disabled = true;
     document.getElementById('precedent').style.display = "block";
     document.getElementById('suivant').style.display = "block";
     document.getElementById('terminer_test').style.display = "none";
@@ -225,18 +226,16 @@ function terminer_test() {
     alert("the quiz is finish")
 }
 
+let pre = 0;
+function chokinBtn(id){
 
+    document.getElementById(pre).classList.remove('btncolor');
+    document.getElementById(id).classList.add('btncolor');
+    pre = id;
 
-
-
-// const message = document.querySelector('#message');
-// const result = document.querySelector('#result');
-// message.addEventListener('input', function () {
-//     if(this.value=10){
-//         result.textContent = this.value;
-//         message.style.color = "red";
-//     }else{
-//         result.textContent = this.value;
-//         message.style.color = "black";
-//     }
-// });          
+    document.getElementById('suivant').disabled = false;
+    quizDataFr[numbre_question].response =  document.getElementById(id).innerText;
+    console.log(quizDataFr[numbre_question].response)
+    console.log(quizDataFr[numbre_question])
+    
+}
