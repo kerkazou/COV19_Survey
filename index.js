@@ -170,6 +170,8 @@ var numbre_question = 0;
 document.getElementById('precedent').style.display = "none";
 document.getElementById('terminer_test').style.display = "none";
 document.getElementById('progress_bar_etat').style.width = "4.545%";
+document.getElementById('NbrQests').innerHTML = quizDataFr.length;
+cont.innerText = numbre_question + 1 ;
 document.getElementById('question').innerHTML = quizDataFr[numbre_question].question;
 document.getElementById('choix').innerHTML = generate_choix();
 
@@ -181,7 +183,7 @@ function generate_choix() {
             content += `<button id="${i}" type="button" onclick="chokinBtn(${i})" value="${quizDataFr[numbre_question].choix[i]}" class="btn btn-group btn_chois button" id="btn_${i}"><span style="font-size: 20px; margin-bottom: 8px;">${quizDataFr[numbre_question].icons[i]}</span><span style="font-size: 20px;">${quizDataFr[numbre_question].choix[i]}</span></button>`;
         }
     } else if(quizDataFr[numbre_question].type== "number"){
-        content += '<div class="input-group btn_chois" style="width: 60%;"><input type="number" class="form-control input_num" max="'+quizDataFr[numbre_question].choix[1]+'" min="'+ quizDataFr[numbre_question].choix[0]+'"  placeholder="'+quizDataFr[numbre_question].choix[0] +"-"+ quizDataFr[numbre_question].choix[1] +'" > <span class="input-group-text input_num" style="background-color: rgba(77, 163, 206, 0.1);">'+ quizDataFr[numbre_question].unite +'</span></div>'
+        content += `<div class="input-group btn_chois" style="width: 60%;"><input type="number" onkeypress="chokinNbr()" onchange="chokinNbr()" class="form-control input_num" max="${quizDataFr[numbre_question].choix[1]}" min="${ quizDataFr[numbre_question].choix[0]}"  placeholder="${quizDataFr[numbre_question].choix[0]} - ${quizDataFr[numbre_question].choix[1]} " > <span class="input-group-text input_num" style="background-color: rgba(77, 163, 206, 0.1);">${quizDataFr[numbre_question].unite}</span></div>`
     }
     return content;
 }
@@ -222,20 +224,31 @@ function question_precedent() {
     document.getElementById('choix').innerHTML = generate_choix();
 }
 
-function terminer_test() {
-    alert("the quiz is finish")
-}
-
 let pre = 0;
 function chokinBtn(id){
-
     document.getElementById(pre).classList.remove('btncolor');
     document.getElementById(id).classList.add('btncolor');
     pre = id;
-
     document.getElementById('suivant').disabled = false;
     quizDataFr[numbre_question].response =  document.getElementById(id).innerText;
-    console.log(quizDataFr[numbre_question].response)
-    console.log(quizDataFr[numbre_question])
-    
+}
+
+function chokinNbr() {
+    const input_num = document.querySelector('.input_num');
+    input_num.addEventListener('input', function () {
+        if(this.value < quizDataFr[numbre_question].choix[0] || this.value > quizDataFr[numbre_question].choix[1]){
+            input_num.style.background = "#eedbdb";
+            input_num.style.color = "#a94442";
+        }
+        else{
+            input_num.style.color = "green";
+            input_num.style.background = "#ffffff";
+            quizDataFr[numbre_question].response = this.value;
+            document.getElementById('suivant').disabled = false;
+        }
+    });
+}
+
+function terminer_test() {
+    alert("the quiz is finish")
 }
