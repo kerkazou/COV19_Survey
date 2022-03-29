@@ -15,9 +15,6 @@ ul li{
     margin: 10px auto;
     text-align: center
 }
-#appelez_rect{
-
-}
 .allo{
     padding: 3px;
     margin: auto;
@@ -38,9 +35,6 @@ ul li{
     font-size: 30px;
     text-align: center;
 }
-/* #button_s2{
-    width: 450px;
-} */
 
 
 @media screen and (max-width: 900px) {

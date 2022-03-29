@@ -66,7 +66,6 @@ body .suivant{
     transition: .2s;
     float: right;
     margin-right: 4%;
-    /* margin-bottom: 30px; */
     margin-top: -50px;
 }
 .suivant:hover{
@@ -82,8 +81,7 @@ body .precedent{
     transition: .2s;
     float: left;
     margin-left: 4%;
-    margin-bottom: 30px;
-    margin-top: -46px;
+    margin-top: -50px;
 }
 
 .precedent_hover{
@@ -99,7 +97,7 @@ body .precedent{
     transition: .2s;
     float: right;
     margin-right: 4%;
-    margin-bottom: 30px;
+    margin-top: -50px;
 }
 
 .btn_chois{
