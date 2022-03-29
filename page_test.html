@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="bootstrap.bundle.min.js">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="NavBar.css">
-    <link rel="stylesheet" href="zaiad.css">
-  <title>page zaiad</title>
+    <link rel="stylesheet" href="style_result.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-<body style="overflow-x: hidden;">
+<body>
+
     <!---------------------- NavBar ---------------------->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NavBar">
+    <nav class="navbar navbar-expand-lg" id="NavBar">
         <div class="container-fluid">
-            <a class="navbar-brand ms-3"><img class="w-50" src="assets/SVG/logo__sante.svg"></a>
+            <a class="navbar-brand ms-3" href="index.html"><img class="w-50" src="assets/SVG/logo__sante.svg"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li><a href=""> Accueil</a></li>
+                    <li><a href="index.html"> Accueil</a></li>
                     <li><a href="">Conseil</a></li>
                     <li id="ar"><svg xmlns="http://www.w3.org/2000/svg" width="101.747" height="37" viewBox="0 0 101.747 37">
                         <g id="Groupe_140" data-name="Groupe 140" transform="translate(-1215.253 -30)">
@@ -55,81 +59,129 @@
         </div>
     </nav>
 
-    <!---------------------- Page 1 ---------------------->
-    <div class="container-fluid" style="background-color:#F4CF1B;">
-        <h5 class="text-primary text-center pt-3">LA DERNIÈRE INFO MÉDICALE</h5>
-        <p class="text-dark fs-6 text-center mx-auto pb-4" style="width: 85%;">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.</p> 
-    </div>
-    <div id="col" class="d-flex px-4">
-        <div>
-            <img src="./Assets/SVG/Group_80.png" alt="img" style="width: 100%;">
-        </div>
-        <div class=" justify-content-start" style=" align-items: center;">
-            <h3 id="text" class="text-center fs-3 mx-auto pt-3 w-100" style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?</h3>
-            <img class="d-block mx-auto my-auto mt-4" src="assets/SVG\élément-1.svg" alt="emoji" id="emoji">
-            <p id="dd" style="width: 100%; font-size: 15px; font-weight: 750; text-align: center; color: #7F7F7F; line-height: 35px;">
-                Je reste vigilant ? <br>
-                Je programme une téléconsultation ? <br>
-                J'appelle le 141 ? <br>
-                Faites le test pour répondre en citoyen éclairé selon vos symptômes.
-            </p>
-            <button onclick="location.href = 'index.html';" class="w-75 border-3 d-block mx-auto" id="button_s" style="background-image: url(./Assets/SVG/Merged\ bar-61.svg); margin: 20px 0; padding: 7px; font-size: 20px; font-weight: 700; color: #1078AD; border: 1px solid #1078AD; border-radius: 10px; background-size: cover;">Démarrer le test</button>
-        </div>
-    </div>
-    
+    <!---------------------- Header Container  ---------------------->
     <div>
-        <h3 id="text" class="text-center fs-3 mx-auto pt-3 w-100" style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Quels sont les symptômes à surveiller ?</h3>
-        <div class="d-flex flex-wrap mt-5">
-            <div class="col-sm-6 col-12 text-center">
-                <img src="./Assets/SVG/ico7.svg" style="width: 8%; margin-bottom: 10px;">
-                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Fièver</h3>
-            </div>
-            <div class="col-sm-6 col-12 text-center">
-                <img src="./Assets/SVG/Calque -8.svg" style="margin-bottom: 10px;">
-                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Nausées et vomissements</h3>
-            </div>
-            <div class="col-sm-6 col-12 text-center">
-                <img src="./Assets/SVG/Calque -2.svg" style="margin-bottom: 10px;">
-                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Gêne respiratoire</h3>
-            </div>
-            <div class="col-sm-6 col-12 text-center">
-                <img src="./Assets/SVG/Calque -1.svg" style="margin-bottom: 10px;">
-                <h3 style="color: #1078AD; font-family: 'Cairo', sans-serif !important;font-weight: 900;">Toux et maux de gorge</h3>
-            </div>
-        </div>
-
-    </div>
-    <!-- <div id="recommandation" style="background-color: #1078AD; margin-top: 70px;">
-        <h1 class="text-center" style="color: white;">Recommandations officielles</h1>
-        <div id="blue" class="d-flex">
-            <div>
-                <h4 class="col-12 h5 text-center" style="color:white;">Si vous pensez être malade, nous vous conseillons :</h4>
-                <ul>
-                    <li><span>⚠</span>Evitez les endroits publics.</li>
-                    <li><span>⚠</span>Ne rendez pas visite aux personnes fragiles.</li>
-                    <li><span>⚠</span>Restez chez vous.</li>
-                    <li><span>⚠</span>Respectez les mesures barrière (lavage de main, masque).</li>
-                    <li><span>⚠</span>Surveillez vos symptômes, l’évolution de votre température corporelle et recherchez un avis médical.</li>
-                </ul>
-            </div>
-            <div id="appele" class="col-6">
-                <p id="appelez" class="col-6"><span>appelez</span></p>
-                <div id="appelez_rect" class="">
-                    <div class="allo"><h5>141</h5></div>
-                    <div class="allo"><h5>080 100 47 47</h5></div>
-                    <div class="allo"><h5>300</h5></div>
+        <div class="d-flex justify-content-center my-3">
+            <div class="row container-sm" style="width: 60%;">
+                <div class="col-4 d-flex justify-content-center flex-column align-items-center">
+                    <div class="d-flex align-items-center justify-content-center lb-circle-container">
+                        <div class="rounded-circle label-circle-s" id="informations"></div>
+                    </div>
+                    <p class="stepper-label">informations</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center flex-column align-items-center">
+                    <div class="d-flex align-items-center justify-content-center lb-circle-container">
+                        <div class="rounded-circle label-circle-ns" id="questions"></div>
+                    </div>
+                    <p class="stepper-label">Questionnaire</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center flex-column align-items-center">
+                    <div class="d-flex align-items-center justify-content-center lb-circle-container">
+                        <div class="rounded-circle label-circle-ns" id="resultat"></div>
+                    </div>
+                    <p class="stepper-label">Resultat</p>
                 </div>
             </div>
         </div>
-    </div> -->
     </div>
-    <div id="aqua">
-        <h1 id="demarrer2">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?</h1>
-        <img class="d-block mx-auto my-auto mt-4" src="assets/SVG\élément-1.svg" alt="emoji" id="emoji">
-        <button class="w-50 border-3 d-block mx-auto" id="button_s" style="background-image: url(./Assets/SVG/Merged\ bar-61.svg); margin: 20px 0; padding: 7px; font-size: 20px; font-weight: 700; color: #1078AD; border: 1px solid #1078AD; border-radius: 10px; background-size: cover;">Démarrer le test</button>
-    <div class="row mt-5" style="height: 25px; background-color: #1078AD;"></div>
-</body>
 
+    <!---------------------- Page 2 ---------------------->
+    <div id="page2">
+        <section style="font-size: 17px; font-weight: 500; line-height: 30px;">
+            <div class="container d-flex justify-content-center">
+              <div class="io-card rounded-3 py-3 py-lg-5 px-3 mb-4">
+                <h3 class="card-title" style="color: #1078AD; font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 900; margin-bottom: 30px; text-align: center;">Préambule</h3>
+                <p class="mt-4">L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.
+                </p>
+                <hr/>
+                <p>Cette application ne substitue pas votre médecin qui est plus apte à vous donner plus de précision. Les informations de cette application est le premier niveau de la détection des cas possibles du COVID-19.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-lg start-test-button" id="testStart" onclick="demarrer_test()">Demarrer le test</button>
+            </div>
+        </section>
+        <footer class="mt-5">
+            <div class="row justify-content-center">
+                <h1 class="p-0 text-center">LOGO</h1>
+            </div>
+            <div class="row">
+                <div class="col-6 text-center p-0">
+                    <span class="d-block stepper-label">Contact</span>
+                    <span class="d-block">Numéro économique - Allo veille épidémiologique</span>
+                    <span class="d-block call-number">080 100 47 47</span>
+                    <span class="d-block">Aide médicale urgente - Allo SAMU</span>
+                    <span class="d-block call-number">141</span>
+                    <span class="d-block">la plateforme téléphonique- Allo 300</span>
+                    <span class="d-block call-number">300</span>
+                </div>
+                <div class="col-6 text-center p-0">
+                    <p><a href="index.html" class="link-primary text-decoration-none">Accueil</a></p>
+                    <hr class="w-50 text-center d-inline-flex" />
+                    <p><a href="" class="link-primary text-decoration-none">Conseils</a></p>
+                    <hr class="w-50 text-center d-inline-flex" />
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!---------------------- Quiz ---------------------->
+    <div class="card" id="quiz">
+        <div class="card-header d-flex justify-content-around align-items-center">
+            <div class="fw-bold"><span id="cont">1</span>/<span id="NbrQests">22</span></div>
+            <div class="col-11" id="progress_bar">
+                <div id="progress_bar_etat"></div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h4 class="mt-4" id="question"></h4>
+            <div class="d-flex justify-content-center" id="choix" style="gap: 50px;"></div>
+            <div>
+                <button class="btn suivant" id="suivant" onclick="question_suivant()">Suivant</button>
+                <button class="btn precedent" id="precedent" onclick="question_precedent()">Precedent</button>
+                <button class="btn terminer_test" id="terminer_test" onclick="terminer_test()">Terminer le test</button>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------- Result Positive ---------------------->
+    <div id="result1">
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="io-card rounded-3 py-3 py-lg-5 px-3 mb-4">
+                <h3 class="card-title">Résultats</h3>
+                <p class="bad-result-message">Appelez le 141</p>
+                <hr/>
+                <p class="result-advice">Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-lg start-test-button" onclick="location.href = 'page_test.html';">Redemarrer le test</button>
+        </div>
+    </div>
+
+    <!---------------------- Result Negative ---------------------->
+    <div id="result2">
+        <div class="container mt-5 text-center">
+            <h1 style="color: #026534;">حالتك الصحية متتخلعش</h1>
+        </div>
+        <div class="container mt-5 text-center">
+            <div class="mx-auto p-3" style="max-width: 500px; background-color: #1078AD; border-radius: 20px;">
+                <div class="">
+                    <h1 class="text-nowrap text-white">بقى فدارك</h1>
+                </div>
+                <div class="mt-4" style="color: #F4CF1B; padding: 10px;">
+                    <h3>بقى فدارك، وحاول متخالطش مع الناس، بزاف ديال الناس الي فيهم الفيروس ماتايبانش فيهم أعراض المرض</h3>
+                </div>
+            </div>
+            <div class="mt-5">
+                <button class="btn btn-lg start-test-button mb-5" onclick="location.href = 'page_test.html';">Redemarrer le test</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
+
 
 <script src="index.js"></script>
