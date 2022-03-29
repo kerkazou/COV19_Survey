@@ -12,10 +12,37 @@ ul li{
     font-weight: 900;
     font-size: 20px;
     color: #F4CF1B;
-    margin-left: 120px;
-    padding-top: 40px;
-    font-family: 'Cairo', sans-serif !important;
+    margin: 10px auto;
+    text-align: center
 }
+#appelez_rect{
+
+}
+.allo{
+    padding: 3px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #F4CF1B;
+    color: #1078AD;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+}
+#aqua{
+    background-color:#96C5DC;
+    color: #1078AD;
+    font-family: 'Cairo', sans-serif !important;
+    padding-bottom: 10px;
+}
+#demarrer2{
+    font-size: 30px;
+    text-align: center;
+}
+/* #button_s2{
+    width: 450px;
+} */
+
+
 @media screen and (max-width: 900px) {
     #sante{
         width: 50px;
@@ -34,5 +61,17 @@ ul li{
     #card{
         flex-direction: column;
         text-align: center;
+    }
+    #blue{
+        flex-direction: column;
+    }
+    #appele{
+        margin: auto;
+    }
+    .allo{
+        width: 100%;
+    }
+    #button_s2{
+        width: 80%;
     }
 }
