@@ -1,14 +1,8 @@
 *{
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
 }
-header{
-    background-image: url(svg/Merged.svg);
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
+
 #choose{  
     height: 50px;
     width: 200px;
@@ -41,15 +35,24 @@ nav ul li a{
     text-overflow: ellipsis; 
 }
 #main{
-    height: 30%;
     width: 70%;
     background-color: #96C5DC;
     border-radius: 5px;
     text-align: center;
-    margin: auto;
+    margin-left: 15%;
+    margin-top: 80px;
+    padding: 40px 20px;
     position: relative;
-    top: 100px;
+    font-weight: 600;
+    font-size: 18px;
 }
+
+.h3{
+    font-size: 30px ;
+    color: #1078AD;
+}
+
+
 .root{
     height: 20px;
     width: 40%;
@@ -62,30 +65,17 @@ nav ul li a{
     height: 60px;
     width: 20%;
     margin: auto;
-    background-color: antiquewhite;
-    position: relative;
-    top: 120px;
+    margin-top: 50px;
 }
-@media only screen and (max-width: 550px) {
-    nav ul li{ 
-      display: none;
-    }
-    .dropdown{
-       position: relative;
-       left: 50%;
-    }
-    .dropbtn{
-        display: block;
-        position: absolute;
-    }  
-    #france{
-        display: none;
-    }  
-    
-  }
-  @media only screen and (max-width: 967px) {
-   #main{
-       height: 400px;
-   }
-    
-  }
+
+.ikhtare button{
+    padding: 10px 20px;
+    background-color: #96c5dc;
+    border: 1px solid #1078AD;
+    color: #1078AD;
+}
+
+.ikhtare button:hover{
+    background-color: #1078AD;
+    color: white !important;
+}

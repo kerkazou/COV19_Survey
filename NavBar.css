@@ -1,0 +1,18 @@
+
+body #NavBar{
+    height: 70px;
+    background-image: url(assets/SVG/Merged_bar-1.svg);
+}
+body #NavBar ul{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#fr{
+    display: none;
+}
+body #NavBar a{
+    text-decoration: none;
+    color: black;
+}

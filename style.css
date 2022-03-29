@@ -2,21 +2,12 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Cairo', sans-serif;
-
 }
-
-body header{
-    margin-top: -30px;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
 
 body #quiz{
     width: 70%;
     left: 15%;
-    top: 50px;
+    bottom: 20px;
 }
 
 body #question{
@@ -28,8 +19,6 @@ body #question{
     font-size: 32px;
     font-weight: 700;
     line-height: 45px;
-    /* line-height: 35px; */
-    /* font-size: 13px;     */
 }
 
 body #progress_bar{
@@ -44,6 +33,10 @@ body #progress_bar{
     background-color: #1078AD;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 body .button{
@@ -73,7 +66,8 @@ body .suivant{
     transition: .2s;
     float: right;
     margin-right: 4%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-top: -50px;
 }
 .suivant:hover{
     background-color: #1078AD;
@@ -89,6 +83,7 @@ body .precedent{
     float: left;
     margin-left: 4%;
     margin-bottom: 30px;
+    margin-top: -46px;
 }
 
 .precedent_hover{
