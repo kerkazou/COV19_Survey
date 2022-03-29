@@ -247,15 +247,6 @@ function question_precedent() {
     document.getElementById('progress_bar_etat').style.width = (numbre_question + 1)* 4.545 + "%";
     document.getElementById('question').innerHTML = quizDataFr[numbre_question].question;
     document.getElementById('choix').innerHTML = generate_choix();
-
-    // for (let i = 0; i < quizDataFr[numbre_question].choix[i]; i++) {
-    //     if(quizDataFr[numbre_question].response == quizDataFr[numbre_question].choix[i]){
-    //         console.log(quizDataFr[numbre_question].response);
-    //         console.log(i);
-    //         document.getElementById(i).classList.add('btncolor');
-    //     }
-    // }
-
 }
 
 let pre = 0;
@@ -297,6 +288,13 @@ function terminer_test() {
     resultat.classList.add('label-circle-s');
 }
 
+    // for (let i = 0; i < quizDataFr[numbre_question].choix[i]; i++) {
+    //     if(quizDataFr[numbre_question].response == quizDataFr[numbre_question].choix[i]){
+    //         console.log(quizDataFr[numbre_question].response);
+    //         console.log(i);
+    //         document.getElementById(i).classList.add('btncolor');
+    //     }
+    // }
 
 // document.getElementById("myButton").onclick = function () {
 //     location.href = "www.yoursite.com";
