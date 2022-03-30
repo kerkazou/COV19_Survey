@@ -410,14 +410,14 @@ function terminer_test() {
         if (facteurPronostique == 0) {
             if (facteursGravitéMajeurs == 0 && facteursGravitéMineurs == 0 && age < 50) {
                 console.log('nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes.Vous pourrez aussi utiliser à nouveau l’application pour révaluer vos symptômes.');
-                res = "negative"; 
+                res = "negative";
             }
             else if ((facteursGravitéMajeurs == 0 && facteursGravitéMineurs == 0 && age > 50 && age < 69) || facteursGravitéMineurs >= 1) {
                 console.log('téléconsultation ou médecin généraliste ou visite à domicile');
                 res = "negative";
                 if (manqueSouffle == true || difficulteAvalaison == true) {
                     console.log('appelez le 141');
-                    res = "pisitive";
+                    res = "positive";
                 }
             }else {
                  console.log('test');
@@ -428,22 +428,22 @@ function terminer_test() {
                 res = "negative"
                 if (manqueSouffle == true || difficulteAvalaison == true) {
                     console.log('appelez le 141');
-                    res = "pisitive";
+                    res = "positive";
                 }
             } else if (facteursGravitéMineurs == 1) {
                 console.log('téléconsultation ou médecin généraliste ou visite à domicile');
                 res = "negative"
                 if (manqueSouffle == true || difficulteAvalaison == true) {
                     console.log('appelez le 141');
-                    res = "pisitive";
+                    res = "positive";
                 }
             } else if (facteursGravitéMineurs >= 2) {
                 console.log('appel 141');
-                res = "pisitive";
+                res = "positive";
             }
         } else if (facteursGravitéMajeurs >= 1) {
             console.log('Appel 141');
-            res = "pisitive";
+            res = "positive";
         }
     } else if (fievre == true && toux == true) {
         if (facteurPronostique == 0) {
@@ -460,7 +460,7 @@ function terminer_test() {
                 res = "negative"
             } else if (facteursGravitéMineurs >= 2) {
                 console.log('Appel 141');
-                res = "pisitive";
+                res = "positive";
             }else{
 
             console.log('test');
@@ -468,7 +468,7 @@ function terminer_test() {
         }
     }else if (fievre == true || toux == true || malGorge == true || courbatures == true) {
         console.log('Appel 141');
-        res = "pisitive";
+        res = "positive";
     }
     else {
         res = "negative";
@@ -485,8 +485,7 @@ function result(res) {
     if(res == "positive"){
         result1.style.display = "block";
         console.log('positive');
-    }
-    else if(res == "negative"){
+    }else if(res == "negative"){
         result2.style.display = "block";
         console.log('negative');
     }else{
